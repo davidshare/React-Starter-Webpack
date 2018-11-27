@@ -10,12 +10,16 @@ module.export = {
     module: {
         rules: [
             {
-                test: /\.js$/,
+                test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader'
                 }
-            }
+			},
+			{
+				test: /\.css$/,
+				use: ["style-loader", "css-loader"]
+			}
         ]
     },
     plugins: [
@@ -23,4 +27,4 @@ module.export = {
             template: './src/index.html'
         })
     ]
-}
+};
