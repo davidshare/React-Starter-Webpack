@@ -11,4 +11,3 @@ insert_final_new_line = true
 
 [*.md]
 trim_trailing_whitespace = false
-
